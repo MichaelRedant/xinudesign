@@ -1,6 +1,16 @@
-import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+// pages/_app.tsx
+import { ChakraProvider } from '@chakra-ui/react';
+import type { AppProps } from 'next/app';
+import theme from '../theme/theme';
+import ScrollUpButton from '../components/ScrollUpButton';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <ChakraProvider theme={theme}>
+      <Component {...pageProps} />
+      <ScrollUpButton />
+    </ChakraProvider>
+  );
 }
+
+export default MyApp;

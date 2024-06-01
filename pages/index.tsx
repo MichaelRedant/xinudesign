@@ -1,16 +1,25 @@
+// pages/index.tsx
+import { Box } from '@chakra-ui/react';
 import SeoHead from '../components/SeoHead';
-import styles from '../styles/Home.module.css';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import CoreServices from '../components/CoreServices';
+import Roadmap from '@/components/Roadmap';
+import AboutXinuDesign from '@/components/AboutXinudesign';
+import Footer from '@/components/Footer';
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
-    <div className={styles.container}>
+    <Box>
       <SeoHead title="Xinudesign - Home" description="Minimalistic design and innovation" />
-      <main className={styles.main}>
-        <h1 className={styles.title}>Welkom bij Xinudesign</h1>
-        <p>Uw bron voor minimalistisch ontwerp en innovatie.</p>
-      </main>
-    </div>
+      <Header />
+      <Hero />
+      <CoreServices />
+      <Roadmap />
+      <AboutXinuDesign />
+      <Footer />
+    </Box>
   );
 };
 
-export default Home; 
+export default Home;

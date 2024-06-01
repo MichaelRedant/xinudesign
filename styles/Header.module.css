@@ -1,0 +1,27 @@
+/* styles/Header.module.css */
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: transparent;
+    color: black;
+  }
+  
+  .header.scrolled {
+    background-color: black;
+    color: white;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .link {
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  

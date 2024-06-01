@@ -1,0 +1,41 @@
+/* styles/Hero.module.css */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .title {
+    font-size: 4rem;
+    color: #100b00ff;
+  }
+  
+  .subtitle {
+    font-size: 2rem;
+    color: #6a687aff;
+  }
+  
+  .button {
+    background-color: #429ea6ff;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #329ea6ff;
+  }
+  
