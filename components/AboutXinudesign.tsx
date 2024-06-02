@@ -1,14 +1,21 @@
 // components/AboutXinuDesign.tsx
-import { Box, Heading, Text, VStack, HStack, Image, useColorModeValue } from '@chakra-ui/react';
+import { Box, Heading, Text, VStack, HStack, Image, useColorModeValue, keyframes } from '@chakra-ui/react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import SignatureAnimation from '../public/animations/signature.json';
 
 const AboutXinuDesign = () => {
   const textBoxBg = useColorModeValue('white', 'gray.800');
 
+  const fadeIn = keyframes`
+    from { opacity: 0; }
+    to { opacity: 1; }
+  `;
+
+  const miniAnimation = `${fadeIn} 1s ease-in-out`;
+
   return (
     <Box id="about" py={10} px={6} textAlign="center" maxW="800px" mx="auto">
-      <Heading as="h2" size="xl" mb={6}>OVER XINUDESIGN</Heading>
+      <Heading as="h2" size="xl" mb={6} animation={miniAnimation}>OVER XINUDESIGN</Heading>
       <Box
         bg={textBoxBg}
         border="2px solid"
@@ -16,6 +23,7 @@ const AboutXinuDesign = () => {
         borderRadius="md"
         p={6}
         textAlign="left"
+        animation={miniAnimation}
       >
         <HStack spacing={4} align="start">
           <Image
@@ -24,30 +32,29 @@ const AboutXinuDesign = () => {
             borderRadius="full"
             boxSize="150px"
             objectFit="cover"
+            animation={miniAnimation}
           />
           <VStack align="start" spacing={4}>
-            <Text>
-              Het freelance bedrijf van Michaël Redant.
-              Uw toegewijde partner voor grafisch ontwerp, wordpress specialist, Google Ads expert, online en offline marketing. Als zaakvoerder van dit freelance bedrijf ben ik toegewijd aan het leveren van creatieve oplossingen en innovatieve marketingstrategieën om aan uw zakelijke behoeften te voldoen.
+            <Text animation={miniAnimation}>
+              Xinudesign is het freelance bedrijf van Michaël Redant. Ik ben uw toegewijde partner voor grafisch ontwerp, WordPress-specialisatie, Google Ads-expertise, en zowel online als offline marketing. Als zaakvoerder van Xinudesign streef ik ernaar om creatieve oplossingen en innovatieve marketingstrategieën te leveren die perfect aansluiten bij uw zakelijke behoeften.
             </Text>
-            <Text>
-              Ik ben vastbesloten om uw zakelijke doelstellingen te realiseren door de kracht van design en marketing te benutten. Samen werken we aan het creëren van een sterke merkidentiteit, boeiende websites en doelgerichte campagnes.
+            <Text animation={miniAnimation}>
+              Mijn doel is om uw zakelijke doelstellingen te realiseren door de kracht van design en marketing optimaal te benutten. Samen werken we aan het opbouwen van een sterke merkidentiteit, het ontwikkelen van boeiende websites en het opzetten van doelgerichte campagnes.
             </Text>
-            <Text>
-              Bij Xinudesign geloven we in de kracht van creativiteit, toewijding en samenwerking om resultaten te bereiken die opvallen en groei stimuleren.
-              Klaar om aan de slag te gaan?
+            <Text animation={miniAnimation}>
+              Bij Xinudesign geloven we in de kracht van creativiteit, toewijding en samenwerking. We streven ernaar resultaten te behalen die niet alleen opvallen, maar ook uw groei stimuleren. Bent u klaar om aan de slag te gaan?
             </Text>
-            <Text>
-              Laten we een kop koffie drinken en bespreken hoe we uw volgende project tot een groot succes kunnen maken.
+            <Text animation={miniAnimation}>
+              Laten we samen een kop koffie drinken en bespreken hoe we uw volgende project tot een groot succes kunnen maken.
             </Text>
-
-            <Text>
-            <Image
+            <Text animation={miniAnimation}>
+                       <Image
             src="/images/Handtekening.webp" // Voeg de afbeelding van Michaël toe in de map public/images
             alt="signature"
             style={{ height: '100%', width: '200px' }}
             objectFit="cover"
           />
+   
               Michaël Redant
             </Text>
           </VStack>
